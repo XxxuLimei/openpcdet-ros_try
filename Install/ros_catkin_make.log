@@ -1,0 +1,100 @@
+(base) xilm@xilm-MS-7D17:~/fuxian/workspace/OpenPCDet_ws/src$ cd .. && catkin build
+-----------------------------------------------------------------------------
+Profile:                     default
+Extending:             [env] /opt/ros/noetic
+Workspace:                   /home/xilm/fuxian/workspace/OpenPCDet_ws
+-----------------------------------------------------------------------------
+Build Space:        [exists] /home/xilm/fuxian/workspace/OpenPCDet_ws/build
+Devel Space:        [exists] /home/xilm/fuxian/workspace/OpenPCDet_ws/devel
+Install Space:      [unused] /home/xilm/fuxian/workspace/OpenPCDet_ws/install
+Log Space:         [missing] /home/xilm/fuxian/workspace/OpenPCDet_ws/logs
+Source Space:       [exists] /home/xilm/fuxian/workspace/OpenPCDet_ws/src
+DESTDIR:            [unused] None
+-----------------------------------------------------------------------------
+Devel Space Layout:          linked
+Install Space Layout:        None
+-----------------------------------------------------------------------------
+Additional CMake Args:       None
+Additional Make Args:        None
+Additional catkin Make Args: None
+Internal Make Job Server:    True
+Cache Job Environments:      False
+-----------------------------------------------------------------------------
+Buildlisted Packages:        None
+Skiplisted Packages:         None
+-----------------------------------------------------------------------------
+Workspace configuration appears valid.
+
+NOTE: Forcing CMake to run for each package.
+-----------------------------------------------------------------------------
+[build] Found 1 packages in 0.0 seconds.                                       
+[build] Updating package table.                                                
+Starting  >>> catkin_tools_prebuild                                            
+_______________________________________________________________________________
+Warnings   << catkin_tools_prebuild:cmake /home/xilm/fuxian/workspace/OpenPCDet_ws/logs/catkin_tools_prebuild/build.cmake.000.log
+CMake Deprecation Warning at /usr/src/googletest/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at /usr/src/googletest/googlemock/CMakeLists.txt:45 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:56 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+cd /home/xilm/fuxian/workspace/OpenPCDet_ws/build/catkin_tools_prebuild; catkin build --get-env catkin_tools_prebuild | catkin env -si  /home/xilm/anaconda3/lib/python3.9/site-packages/cmake/data/bin/cmake /home/xilm/fuxian/workspace/OpenPCDet_ws/build/catkin_tools_prebuild --no-warn-unused-cli -DCATKIN_DEVEL_PREFIX=/home/xilm/fuxian/workspace/OpenPCDet_ws/devel/.private/catkin_tools_prebuild -DCMAKE_INSTALL_PREFIX=/home/xilm/fuxian/workspace/OpenPCDet_ws/install; cd -
+
+...............................................................................
+Finished  <<< catkin_tools_prebuild                [ 0.7 seconds ]             
+Starting  >>> openpcdet                                                        
+_______________________________________________________________________________
+Warnings   << openpcdet:cmake /home/xilm/fuxian/workspace/OpenPCDet_ws/logs/openpcdet/build.cmake.000.log
+CMake Deprecation Warning at /usr/src/googletest/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at /usr/src/googletest/googlemock/CMakeLists.txt:45 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+CMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:56 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+
+cd /home/xilm/fuxian/workspace/OpenPCDet_ws/build/openpcdet; catkin build --get-env openpcdet | catkin env -si  /home/xilm/anaconda3/lib/python3.9/site-packages/cmake/data/bin/cmake /home/xilm/fuxian/workspace/OpenPCDet_ws/src/OpenPCDet_ros --no-warn-unused-cli -DCATKIN_DEVEL_PREFIX=/home/xilm/fuxian/workspace/OpenPCDet_ws/devel/.private/openpcdet -DCMAKE_INSTALL_PREFIX=/home/xilm/fuxian/workspace/OpenPCDet_ws/install; cd -
+
+...............................................................................
+Finished  <<< openpcdet                            [ 1.0 seconds ]             
+[build] Summary: All 2 packages succeeded!                                     
+[build]   Ignored:   None.                                                     
+[build]   Warnings:  2 packages succeeded with warnings.                       
+[build]   Abandoned: None.                                                     
+[build]   Failed:    None.                                                     
+[build] Runtime: 1.7 seconds total.                                            
+[build] Note: Workspace packages have changed, please re-source setup files to use them.
