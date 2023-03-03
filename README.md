@@ -1,6 +1,9 @@
 # openpcdet-ros_try  
 -------------------------
 
+0302:  
+`catkin_tools`安装方法：[链接](https://catkin-tools.readthedocs.io/en/latest/installing.html)  
+
 0303:  
 try to run commend`roslaunch openpcdet 3d_object_detector.launch` in zsh, but get  
 ```
