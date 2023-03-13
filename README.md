@@ -18,6 +18,7 @@ log file: /home/xilm/.ros/log/8df7978a-b96e-11ed-9991-95647510a683/object_3d_det
 Have not found the proper solution...  
 To be continued...  
 Another solution: `source activate base(this is my env name)`, enter conda environment, then make.  
+
 0312：
 Solution find!  
 Some path code has been modified.  
