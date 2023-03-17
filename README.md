@@ -56,4 +56,6 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 /tf_static
 ```  
 可以看到，这里的点云节点名称从`/velodyne_points`改为了`/kitti/velo/pointcloud`,由此，将`config.yaml`和`.rviz`文件中的名称改过来  
-改完之后发现rviz上无法显示点云，但是能进行检测
+改完之后发现rviz上无法显示点云，但是能进行检测  
+- 突然发现，这里运行rosbag时`rosbag play kitti_2011_09_26_drive_0005_synced.bag -r 0.1 --pause`,-r后面的参数为0.1是帧率，只有帧率低了，检测框才能和点云帧对齐，因为检测框发布的很慢。据此修改了pointpillar_ros的代码，把launch文件里直接运行rosbag的命令去掉，在终端自己运行kitti的bag，帧率调整为0.1就可以看到好的检测结果了。  
+- 这么说，还需要解决如何让检测框快速发布的问题，不然根本不可能进行实时检测。。。  
