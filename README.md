@@ -34,4 +34,26 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 /rosout_agg
 /velodyne_points
 ```  
-- 
+- 使用从kitti官网下载的raw data：2011_09_26_0005，利用kitti2bag转为bag后，将bag进行play查看发布的topic：  
+```
+(base) xilm@xilm-MS-7D17:~$ rostopic list
+/clock
+/kitti/camera_color_left/camera_info
+/kitti/camera_color_left/image_raw
+/kitti/camera_color_right/camera_info
+/kitti/camera_color_right/image_raw
+/kitti/camera_gray_left/camera_info
+/kitti/camera_gray_left/image_raw
+/kitti/camera_gray_right/camera_info
+/kitti/camera_gray_right/image_raw
+/kitti/oxts/gps/fix
+/kitti/oxts/gps/vel
+/kitti/oxts/imu
+/kitti/velo/pointcloud
+/rosout
+/rosout_agg
+/tf
+/tf_static
+```  
+可以看到，这里的点云节点名称从`/velodyne_points`改为了`/kitti/velo/pointcloud`,由此，将`config.yaml`和`.rviz`文件中的名称改过来  
+改完之后发现rviz上无法显示点云，但是能进行检测
