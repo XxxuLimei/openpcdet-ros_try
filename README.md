@@ -23,3 +23,15 @@ Another solution: `source activate base(this is my env name)`, enter conda envir
 Solution find!  
 Some path code has been modified.  
 BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn state as running so that the RViz can show the outcome.  
+
+0317： 开始尝试复现其他框架  
+1. 将原来的sequence.bag换为kitti里其他的raw data：  
+- 在终端运行`rosbag play kitti_sequence11_half.bag -r 1 --pause`后，按下空格，显示为running;接着运行`rostopic list`查看bag发布了什么话题：  
+```
+(base) xilm@xilm-MS-7D17:~$ rostopic list
+/clock
+/rosout
+/rosout_agg
+/velodyne_points
+```  
+- 
