@@ -96,3 +96,8 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 - 看看SECOND模型： 在config.yaml文件中修改；发现它的检测结果更逊。。。于前两个（/狗头   
 - 看看SECOND-iou模型： 比SECOND的结果改善了很多；  
 - 看看pointrcnn模型： 比pointpillar, SECOND以及SECOND-iou都差。。。好多检测不到的；  
+- 看看pointrcnn-iou模型： 比pointrcnn出现的误检框少了很多，但是检测效果还是比较差，好多该检测出来的没有检测出来；  
+- 看看Part-A2-free模型： 还是好多没检测出来的，真的不如pv-rcnn；  
+- 看看Part-A2-Anchor模型： 比上面的free版本好太多了，但是依然有许多误检，漏检少了很多；  
+- 看看Voxel-Rcnn模型： 误检还挺多，但是漏检不太多了，总体比不上pv-rcnn；  
+5. 接下来尝试把视觉融合的模型放上去，先试试pointpainting：  
