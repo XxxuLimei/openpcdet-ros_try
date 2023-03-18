@@ -92,3 +92,7 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 ```  
 3. 改完发现总是漏检好多，于是尝试改检测阈值：从0.8改到0.5，发现检测框突然多了很多，但是还是有很多当前帧明明存在物体却不予显示检测结果，或者是明明没有物体但检测出了物体，观察发现一段时间内检测出的结果是正确的，即如果当前存在物体，有时会显示，有时不会显示，会显示的帧数多于不显示的帧数。  
 4. 接着更换测试的模型文件，之前使用的是pv_rcnn，现在要对openpcdet里面的其他文件都进行一个测试：  
+- 先替换pointpillar模型: 在config.yaml文件中修改；发现pointpillar的检测结果确实逊。。。于pvrcnn（/狗头   
+- 看看SECOND模型： 在config.yaml文件中修改；发现它的检测结果更逊。。。于前两个（/狗头   
+- 看看SECOND-iou模型： 比SECOND的结果改善了很多；  
+- 看看pointrcnn模型： 比pointpillar, SECOND以及SECOND-iou都差。。。好多检测不到的；  
