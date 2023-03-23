@@ -103,3 +103,10 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 - 看看Part-A2-Anchor模型： 比上面的free版本好太多了，但是依然有许多误检，漏检少了很多；  
 - 看看Voxel-Rcnn模型： 误检还挺多，但是漏检不太多了，总体比不上pv-rcnn；  
 5. 接下来尝试把视觉融合的模型放上去，先试试pointpainting：  
+## 0323:  
+- 之前把pointpainting复现了一下，梳理了该算法的思路：首先是对图像进行语义分割，接着对点云进行painting，之后再对点云进行目标检测；  
+- 由于在RViz上涉及到的只有点云的可视化和绘制检测框，而点云的可视化目前在openpcdet——ros框架下已经完成，因此重点考虑检测框；  
+- 对于一台安装有camera和velodyne的小车来说，进行pointpainting的内部流程有四个步骤：1.camera拍摄照片，车载gpu进行语义分割算法；2.velodyne采集点云，使用painting.py文件对点云着色；3.运行test.py，获得检测框坐标；4.将检测框显示在RViz上。  
+- 这可以分为两种情况：1.使用KITTI数据集；2.实际情况下的小车运行（初步估计应该不能实时检测，延时太高了）；  
+- 对于第一种情况：使用KITTI数据集，如果不更换语义分割的模型，那么就意味着painted的点云不变-->如果不需要训练，仅仅是测试的话，只要给了训练好的权重文件，看看如何把test.py运行产生的3D检测框发布到RViz上即可；  
+- 
