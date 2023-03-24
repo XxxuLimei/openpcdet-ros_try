@@ -109,4 +109,7 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 - 对于一台安装有camera和velodyne的小车来说，进行pointpainting的内部流程有四个步骤：1.camera拍摄照片，车载gpu进行语义分割算法；2.velodyne采集点云，使用painting.py文件对点云着色；3.运行test.py，获得检测框坐标；4.将检测框显示在RViz上。  
 - 这可以分为两种情况：1.使用KITTI数据集；2.实际情况下的小车运行（初步估计应该不能实时检测，延时太高了）；  
 - 对于第一种情况：使用KITTI数据集，如果不更换语义分割的模型，那么就意味着painted的点云不变-->如果不需要训练，仅仅是测试的话，只要给了训练好的权重文件，看看如何把test.py运行产生的3D检测框发布到RViz上即可；  
-- 
+## 0324:  
+- 将openpcdet的config.yaml文件修改了模型的配置，然后直接用09_26_0084的bag运行，发现检测框没有显示，此时终端已经开始报错，总体原因就是这个raw_data没有painted。  
+- 考虑怎么利用0084的图像去着色0084的点云，有了着色的点云之后，怎么把他转为bag，这些着色的部分如何发布。  
+
