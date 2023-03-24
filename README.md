@@ -112,4 +112,5 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 ## 0324:  
 - 将openpcdet的config.yaml文件修改了模型的配置，然后直接用09_26_0084的bag运行，发现检测框没有显示，此时终端已经开始报错，总体原因就是这个raw_data没有painted。  
 - 考虑怎么利用0084的图像去着色0084的点云，有了着色的点云之后，怎么把他转为bag，这些着色的部分如何发布。  
-
+- 本来准备修改pointpainting中的painting.py脚本的，结果发现KITTI的3D目标检测数据集和raw_data数据给的方式不大一样。。。得先好好学习一下raw_Data数据组织方式是什么了，再看看painting.py怎么适应它；  
+- 
