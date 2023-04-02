@@ -115,4 +115,5 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 - 本来准备修改pointpainting中的painting.py脚本的，结果发现KITTI的3D目标检测数据集和raw_data数据给的方式不大一样。。。得先好好学习一下raw_Data数据组织方式是什么了，再看看painting.py怎么适应它；  
 ## 0402:  
 - 真的很奇怪，只要新安装一个框架，里面如果含有pcdet，那么我的pcdet的环境就会改变。。。  
-- 
+- 没啥事，发现pointpainting的pcdet没有voxel_rcnn，所以换了个别的模型，成功了。  
+- *想把kitti_raw_data的数据进行painted*；  
