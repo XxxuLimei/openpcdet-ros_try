@@ -116,4 +116,4 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 ## 0402:  
 - 真的很奇怪，只要新安装一个框架，里面如果含有pcdet，那么我的pcdet的环境就会改变。。。  
 - 没啥事，发现pointpainting的pcdet没有voxel_rcnn，所以换了个别的模型，成功了。  
-- *想把kitti_raw_data的数据进行painted*；  
+- **想把kitti_raw_data的数据进行painted**；  
