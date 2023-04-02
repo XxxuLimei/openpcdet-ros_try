@@ -125,4 +125,5 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 ![1679105917(1)](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/20230402_1.png)  
 2. 整个实现的流程应该是：相机图像、激光雷达点云数据发布-->订阅这两个话题-->获取点云-->获取图像并进行语义分割-->进行图像和点云的calibration-->涂抹点云，生成涂抹后的点云帧-->使用pointpillar_painted进行点云检测-->将检测好的框画出来  
 - 如果实现了以上几步的话，再考虑进行对涂抹的点云着色，在RViz上发布颜色不同的点云；  
-
+- **对相机图像和激光雷达点云数据进行发布**：✓  
+- **订阅这两个发布的话题**：  
