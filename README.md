@@ -121,6 +121,6 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 - 准备calibration文件：对照train中的calib进行编写，这里有一篇[博客](https://zhuanlan.zhihu.com/p/99114433)说明了train中的calib各个参数的含义，对照着修改一下；  
 - calibration文件修改完毕，具体做法是：首先打开`calib_cam_to_cam.txt`文件，将`P_rect_00, P_rect_01, P_rect_02, P_rect_03`这几个参数作为calib文件的`P0, P1, P2, P3`，再将`R_rect_00`作为calib文件的`R0_rect`；打开`calib_velo_to_cam.txt`文件，将`R, T`参数作为`Tr_velo_to_cam`参数，具体来说是每3个`R`放一个`T`，这样就把3\*3的`R`和1\*3的`T`变成了3\*4的`Tr_velo_to_cam`；再打开`calib_imu_to_velo.txt`文件，将`R, T`参数作为`Tr_imu_to_velo`参数，具体来说是每3个`R`放一个`T`，这样就把3\*3的`R`和1\*3的`T`变成了3\*4的`Tr_imu_to_velo`。我修正好的calibration文件上传到了calib文件夹中。  
 - 接下来使用`painting_raw_data.py`文件进行painting过程。  
-- 然后使用`demo.py`文件对结果进行可视化，如下图所示。
-
+- 然后使用`demo.py`文件对结果进行可视化，如下图所示。  
+![1679105917(1)](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/20230402_1.png)  
 - 
