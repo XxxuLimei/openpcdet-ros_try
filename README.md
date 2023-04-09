@@ -157,5 +157,6 @@ cv_image = bridge.imgmsg_to_cv2(msg, "bgr8")
 cv2.imshow("Image window", cv_image)
 cv2.waitKey(3)
 ```  
-![]()  
-- 
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-04-09%2019-15-24.png)  
+- 接下来进行语义分割：  
+
