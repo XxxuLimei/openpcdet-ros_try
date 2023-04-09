@@ -131,4 +131,12 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 ## 0403：
 1. **进行语义分割**：剩下的分为以下几个步骤：获取左方相机检测到的图像-->get score（即图像分割）-->获取右方相机检测到的图像-->get score（即图像分割）-->获取点云-->进行点云涂抹-->调用模型进行检测-->发布检测框；  
 - **获取左方相机检测到的图像，然后转换为可以用于目标检测的img格式**：  
+## 0409:  
+1. 将之前的工作整理步骤出来：  
+- 打开终端，运行`roscore`;  
+- 在`/home/xilm/pointpainting_ros/catkin_ws路径下运行`source devel/setup.bash`，然后运行`rviz`;  
+- 在`/home/xilm/pointpainting_ros/catkin_ws路径下运行`source devel/setup.bash`，然后`cd src/pointpainting_ros/src/`,接着运行`rosrun pointpainting_ros kitti_raw_data.py`,就可以对左视相机和右视相机的图像，以及点云数据进行发布了；  
+- 在rviz下选择`File->Open config`，然后选择`/home/xilm/pointpainting_ros/catkin_ws/src/pointpainting_ros/launch`路径下的`default_pointpainting.rviz`文件，就可以在Rviz下看到发布的数据了。  
+![]()  
 - 
+
