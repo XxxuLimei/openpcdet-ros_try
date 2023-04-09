@@ -137,6 +137,18 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 - 在`/home/xilm/pointpainting_ros/catkin_ws路径下运行`source devel/setup.bash`，然后运行`rviz`;  
 - 在`/home/xilm/pointpainting_ros/catkin_ws路径下运行`source devel/setup.bash`，然后`cd src/pointpainting_ros/src/`,接着运行`rosrun pointpainting_ros kitti_raw_data.py`,就可以对左视相机和右视相机的图像，以及点云数据进行发布了；  
 - 在rviz下选择`File->Open config`，然后选择`/home/xilm/pointpainting_ros/catkin_ws/src/pointpainting_ros/launch`路径下的`default_pointpainting.rviz`文件，就可以在Rviz下看到发布的数据了。  
-![]()  
-- 
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-04-09%2018-49-10.png)  
+- 接着对图像数据和点云数据进行订阅：打开一个终端，运行`source devel/setup.bash`,然后`cd src/pointpainting_ros/src/`,再`rosrun pointpainting_ros pointpainting_detect.py`,就可以看到以下信息：  
+```
+(base) xilm@xilm-MS-7D17:~/pointpainting_ros/catkin_ws/src/pointpainting_ros/src$ rosrun pointpainting_ros pointpainting_detect.py 
+[INFO] [1681037714.261403]: get left image!
+[INFO] [1681037714.262279]: get right image!
+[INFO] [1681037714.343794]: get point cloud!
+[INFO] [1681037714.364087]: get right image!
+[INFO] [1681037714.369660]: get left image!
+[INFO] [1681037714.446046]: get point cloud!
+[INFO] [1681037714.466271]: get left image!
+[INFO] [1681037714.467332]: get right image!
+[INFO] [1681037714.548663]: get point cloud!
+```  
 
