@@ -151,4 +151,11 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 [INFO] [1681037714.467332]: get right image!
 [INFO] [1681037714.548663]: get point cloud!
 ```  
-- 需要找到如何将接收到的ros图像转为PIL图像。  
+- 需要找到如何将接收到的ros图像转为PIL图像: 找到一个[教程](https://blog.csdn.net/weixin_40863346/article/details/80430251),使用CvBridge将接收到的图像转为cv图像，然后使用cv2.imshow()发布出来，可以看到实时显示的图像。  
+```
+cv_image = bridge.imgmsg_to_cv2(msg, "bgr8")
+cv2.imshow("Image window", cv_image)
+cv2.waitKey(3)
+```  
+![]()  
+- 
