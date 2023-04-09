@@ -151,4 +151,4 @@ BTW, when run rosbag, notice if there is "RUNNING". If not, press space to turn 
 [INFO] [1681037714.467332]: get right image!
 [INFO] [1681037714.548663]: get point cloud!
 ```  
-
+- 需要找到如何将接收到的ros图像转为PIL图像。  
