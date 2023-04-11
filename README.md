@@ -159,4 +159,9 @@ cv2.waitKey(3)
 ```  
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-04-09%2019-15-24.png)  
 - 接下来进行语义分割：  
-
+## 0411：  
+1. 前两天完成了deeplabv3+在ros上的复现，可以对图像进行接收，然后进行语义分割，并将分割结果发布出去；其逻辑是：
+- 首先定义subsrcier,并加载deeplabv3+模型；  
+- 定义一个图像publisher，用于后续发布分割的图像，同时开启接收器；  
+- 一旦接收器接收到图像，立刻调用处理函数，该函数用于对图像进行语义分割，并将分割好的图像publish出去。  
+2. 在pointpainting中首先进行双目图像的语义分割。  
