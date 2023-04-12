@@ -167,3 +167,5 @@ cv2.waitKey(3)
 2. 在pointpainting中首先进行双目图像的语义分割。  
 ## 0412：  
 1. 尝试了`inference_segmentor`函数可以传入`cv.imread()`的图像；  
+2. opencv使用的是BGR编码，Matplotlib使用的是RGB编码，注意转换；  
+3. 
