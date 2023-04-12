@@ -168,4 +168,4 @@ cv2.waitKey(3)
 ## 0412：  
 1. 尝试了`inference_segmentor`函数可以传入`cv.imread()`的图像；  
 2. opencv使用的是BGR编码，Matplotlib使用的是RGB编码，注意转换；  
-3. 
+3. 传过来的图片总是没办法正常读取，这里找到一个[PIL和Opencv相互转化](https://blog.csdn.net/weixin_50113231/article/details/123004037)的文章。  
