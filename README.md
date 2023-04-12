@@ -165,3 +165,5 @@ cv2.waitKey(3)
 - 定义一个图像publisher，用于后续发布分割的图像，同时开启接收器；  
 - 一旦接收器接收到图像，立刻调用处理函数，该函数用于对图像进行语义分割，并将分割好的图像publish出去。  
 2. 在pointpainting中首先进行双目图像的语义分割。  
+## 0412：  
+1. 尝试了`inference_segmentor`函数可以传入`cv.imread()`的图像；  
