@@ -177,3 +177,6 @@ File "/home/xilm/pointpainting_ros/catkin_ws/src/pointpainting_ros/src/mmseg/mod
 IndexError: too many indices for array: array is 3-dimensional, but 4 were indexed
 ```  
 通过打印tensor的shape，发现是因为处理后的图像是`N, C, H, W`，把它squeeze(0)，去掉N（Batch dim）即可。  
+2. 还是不行，发现语义分割得到的结果是all black。尝试用最简单的脚本分割了kitti，是没问题的，图片在下面。  
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/img_screenshot_13.04.2023.png)  
+3. 
