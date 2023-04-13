@@ -169,3 +169,11 @@ cv2.waitKey(3)
 1. 尝试了`inference_segmentor`函数可以传入`cv.imread()`的图像；  
 2. opencv使用的是BGR编码，Matplotlib使用的是RGB编码，注意转换；  
 3. 传过来的图片总是没办法正常读取，这里找到一个[PIL和Opencv相互转化](https://blog.csdn.net/weixin_50113231/article/details/123004037)的文章。  
+## 0413：  
+1. mmseg的`show_result`函数不知道为什么总报错：  
+```
+File "/home/xilm/pointpainting_ros/catkin_ws/src/pointpainting_ros/src/mmseg/models/segmentors/base.py", line 257, in show_result
+    color_seg[seg == label, :] = color
+IndexError: too many indices for array: array is 3-dimensional, but 4 were indexed
+```  
+通过打印tensor的shape，发现是因为处理后的图像是`N, C, H, W`，把它squeeze(0)，去掉N（Batch dim）即可。  
