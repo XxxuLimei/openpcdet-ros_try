@@ -199,3 +199,5 @@ image_pub_l.publish(ros_frame)  # use publisher to publish imgmsg
 - 定义`get_calib_file()`函数，在其中声明全局变量`calib`，并在主函数开始时调用；  
 4. **涂抹点云，生成涂抹后的点云帧**：  
 - 由于算法涉及到多个传感器数据的融合，因此需要进行时间对齐（时间同步）。
+- 确定问题解决方法：`TimeSynchronizer`  
+- 
