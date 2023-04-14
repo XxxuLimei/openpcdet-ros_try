@@ -195,4 +195,5 @@ ros_frame = bridge.cv2_to_imgmsg(seg_img, "bgr8")  # convert cv2image to imgmsg
 ros_frame.header.stamp = rospy.Time.now()  # get time frame
 image_pub_l.publish(ros_frame)  # use publisher to publish imgmsg
 ```  
-3. 
+3. **进行图像和点云的calibration-->涂抹点云，生成涂抹后的点云帧**：  
+- 
