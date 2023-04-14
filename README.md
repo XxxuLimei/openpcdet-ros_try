@@ -185,4 +185,6 @@ IndexError: too many indices for array: array is 3-dimensional, but 4 were index
 1. 终于把语义分割搞好了！错误原因在于`inference_segmentor(seg_model, cv_image)`后需要添加`max(1)[1].cpu().numpy()[0]`，也就是说从19个类中选出最大的一类用于语义分割。  
 - 注意：`inference_segmentor(seg_model, cv_image)`后的result的shape为`(N, 19, H, W)`，这里由于每次只接收一张图，所以N=1，那么`max(1)`就是从19个类别中选出最大的一类。  
 - 输入`show_result`的变量形状应该是`[(H, W)]`。  
+- 最终效果如图：  
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-04-14%2010-34-23.png)  
 
