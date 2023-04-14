@@ -187,4 +187,4 @@ IndexError: too many indices for array: array is 3-dimensional, but 4 were index
 - 输入`show_result`的变量形状应该是`[(H, W)]`。  
 - 最终效果如图：  
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-04-14%2010-34-23.png)  
-
+2. 将语义分割的结果以ROS图像的形式发布出去，在RViz上进行接收。  
