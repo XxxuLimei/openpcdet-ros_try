@@ -200,4 +200,12 @@ image_pub_l.publish(ros_frame)  # use publisher to publish imgmsg
 4. **涂抹点云，生成涂抹后的点云帧**：  
 - 由于算法涉及到多个传感器数据的融合，因此需要进行时间对齐（时间同步）。
 - 确定问题解决方法：`TimeSynchronizer`  
-- 
+## 0416:  
+1. 首先使用下面的代码进行了同时订阅两个camera的信息：  
+```
+image_sub_l = message_filters.Subscriber(sub_img_l_topic[0], Image)
+image_sub_r = message_filters.Subscriber(sub_img_r_topic[0], Image)
+ts = message_filters.TimeSynchronizer([image_sub_l, image_sub_r], 10)
+ts.registerCallback(seg_double)
+```  
+2. 测试是否可以同时订阅img和pointcloud
