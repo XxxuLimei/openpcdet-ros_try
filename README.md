@@ -208,4 +208,6 @@ image_sub_r = message_filters.Subscriber(sub_img_r_topic[0], Image)
 ts = message_filters.TimeSynchronizer([image_sub_l, image_sub_r], 10)
 ts.registerCallback(seg_double)
 ```  
-2. 测试是否可以同时订阅img和pointcloud
+2. 测试是否可以同时订阅img和pointcloud  
+## 0428：  
+1. 将检测算法使用tensorRT部署后，检测速度可以翻一番。  
