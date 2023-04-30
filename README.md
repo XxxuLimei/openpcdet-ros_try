@@ -230,3 +230,4 @@ point_sub = message_filters.Subscriber(sub_lidar_topic[0], PointCloud2)
 ts = message_filters.TimeSynchronizer([image_sub_l, image_sub_r, point_sub], 10)
 ts.registerCallback(seg_double)
 ```  
+2. 准备对点云进行涂抹，目前仅仅获得了语义分割的分数，还没有确认分割结果是否正确。  
