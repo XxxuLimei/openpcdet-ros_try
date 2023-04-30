@@ -211,3 +211,22 @@ ts.registerCallback(seg_double)
 2. 测试是否可以同时订阅img和pointcloud  
 ## 0428：  
 1. 将检测算法使用tensorRT部署后，检测速度可以翻一番。  
+## 0430:  
+1. 终于能够同时接收图像和点云信息！实际上是因为我在发布图像数据的时候，没有把它们的header.stamp与点云搞得一样，所以只需要在发布时把它们都改成下面的形式即可。  
+```
+ros_camera_l = bridge.cv2_to_imgmsg(img_l, "bgr8")
+ros_camera_r = bridge.cv2_to_imgmsg(img_r, "bgr8")
+ros_camera_l.header = header
+ros_camera_r.header = header
+cam_pub_left.publish(ros_camera_l)
+cam_pub_right.publish(ros_camera_r)
+pcl_pub.publish(pcl2.create_cloud_xyz32(header, point_cloud[:, :3]))
+```  
+然后使用同步订阅机制，在检测脚本里使用下面的代码进行两个图像和一个点云信息的订阅即可。  
+```
+image_sub_l = message_filters.Subscriber(sub_img_l_topic[0], Image)
+image_sub_r = message_filters.Subscriber(sub_img_r_topic[0], Image)
+point_sub = message_filters.Subscriber(sub_lidar_topic[0], PointCloud2)
+ts = message_filters.TimeSynchronizer([image_sub_l, image_sub_r, point_sub], 10)
+ts.registerCallback(seg_double)
+```  
