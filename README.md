@@ -236,4 +236,5 @@ ts.registerCallback(seg_double)
 - RViz发布的点云居然只有一个窗口，也就是说，原始点云和涂抹后的点云都在一个窗口内，想要观察涂抹后的点云，需要取消勾选发布的点云。  
 - 以下是涂抹后的点云发布的信息。  
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-04%2016-58-49.png)  
+- 可以看到，涂抹后的点云与原始点云有区别，只剩下了相机的FOV视图。  
 2. 使用OpenPCDet进行点云检测。  
