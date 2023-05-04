@@ -231,3 +231,9 @@ ts = message_filters.TimeSynchronizer([image_sub_l, image_sub_r, point_sub], 10)
 ts.registerCallback(seg_double)
 ```  
 2. 准备对点云进行涂抹，目前仅仅获得了语义分割的分数，还没有确认分割结果是否正确。  
+## 0504：  
+1. 实现了对点云的涂抹，并进行了发布。  
+- RViz发布的点云居然只有一个窗口，也就是说，原始点云和涂抹后的点云都在一个窗口内，想要观察涂抹后的点云，需要取消勾选发布的点云。  
+- 以下是涂抹后的点云发布的信息。  
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-04%2016-58-49.png)  
+2. 使用OpenPCDet进行点云检测。  
