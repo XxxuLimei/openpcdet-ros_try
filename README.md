@@ -238,3 +238,7 @@ ts.registerCallback(seg_double)
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-04%2016-58-49.png)  
 - 可以看到，涂抹后的点云与原始点云有区别，只剩下了相机的FOV视图。  
 2. 使用OpenPCDet进行点云检测。  
+## 0508：  
+1. 实现了对涂抹后点云的检测，同时发布了检测框。  
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-08%2010-31-18.png)  
+2. 将图片改为与当前检测时刻相同的图片帧。  
