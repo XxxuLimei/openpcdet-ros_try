@@ -242,3 +242,4 @@ ts.registerCallback(seg_double)
 1. 实现了对涂抹后点云的检测，同时发布了检测框。  
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-08%2010-31-18.png)  
 2. 将图片改为与当前检测时刻相同的图片帧。  
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-08%2010-44-47.png)  
