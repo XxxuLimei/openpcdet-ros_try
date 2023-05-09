@@ -243,3 +243,5 @@ ts.registerCallback(seg_double)
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-08%2010-31-18.png)  
 2. 将图片改为与当前检测时刻相同的图片帧。  
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-08%2010-44-47.png)  
+## 0509：  
+1. 将当前帧真实的检测框（GT Box）发布出来，用于和检测结果进行对比。  
