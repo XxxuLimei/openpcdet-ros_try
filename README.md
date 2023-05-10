@@ -246,4 +246,8 @@ ts.registerCallback(seg_double)
 ## 0509：  
 1. 将当前帧真实的检测框（GT Box）发布出来，用于和检测结果进行对比。  
 - 这里发布检测框使用的不是tracklets,而是KITTI的track，将场景换成0005，对应track里面的0000。  
+- 更换了检测sequence后的结果如图所示。  
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-10%2020-12-00.png)  
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-10%2020-12-22.png)  
+- 接下来将真实的检测框（GT Box）进行发布，这些数据是从track中读取的。  
 - 
