@@ -250,4 +250,6 @@ ts.registerCallback(seg_double)
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-10%2020-12-00.png)  
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-10%2020-12-22.png)  
 - 接下来将真实的检测框（GT Box）进行发布，这些数据是从track中读取的。  
-- 
+## 0513：  
+1. 发布出了GT框，但是发现帧对不上。需要获取每张图片的帧数。  
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-13%2021-20-46.png)  
