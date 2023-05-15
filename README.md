@@ -253,3 +253,5 @@ ts.registerCallback(seg_double)
 ## 0513：  
 1. 发布出了GT框，但是发现帧对不上。需要获取每张图片的帧数。  
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-13%2021-20-46.png)  
+## 0515:  
+1. 对点云进行涂抹：根据处理后获得的增强点云的信息，将点云中被分割为车、行人和骑自行车的人这三类，分别涂抹不同的颜色。  
