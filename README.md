@@ -255,3 +255,10 @@ ts.registerCallback(seg_double)
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-13%2021-20-46.png)  
 ## 0515:  
 1. 对点云进行涂抹：根据处理后获得的增强点云的信息，将点云中被分割为车、行人和骑自行车的人这三类，分别涂抹不同的颜色。  
+- 首先确定每个点是属于哪个类别：涂抹后的点有八个维度，分别是x,y,z,r,以及属于背景和车、行人和骑自行车的人这四类的概率。可以对这四个维度获取最大值，通过索引确定点属于哪个类别->使用argmax函数；  
+- 接着设定一个包含不同类别对应颜色的数组；  
+- 然后对每个点，取出xyz信息，并通过类别信息获得对应该点的rgb信息，把他们都添加到一个point_data的数组中；  
+- 设定一个Pointfield，其中包括x,y,z,rgba；  
+- 使用create_point创建可以发布的点云。  
+**注意**：接收到点云信息后，一定要在RViz点云的部分找到Color Transformer，将其从intensity改为RGB8，否则是无法看到彩色点云的。这里我是参考了[这篇博客](https://qiita.com/KEROLL5/items/a0f0ec67eb17d321c546)  
+发布的彩色点云如下：  
