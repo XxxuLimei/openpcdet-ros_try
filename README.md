@@ -261,8 +261,9 @@ ts.registerCallback(seg_double)
 - 设定一个Pointfield，其中包括x,y,z,rgba；  
 - 使用create_point创建可以发布的点云。  
 **注意**：接收到点云信息后，一定要在RViz点云的部分找到Color Transformer，将其从intensity改为RGB8，否则是无法看到彩色点云的。这里我是参考了[这篇博客](https://qiita.com/KEROLL5/items/a0f0ec67eb17d321c546)  
-![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-15%2016-26-45.png)
+![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-15%2016-26-45.png)  
 发布的彩色点云如下：  
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-15%2016-27-02.png)  
 检测结果如下：  
 ![](https://github.com/XxxuLimei/openpcdet-ros_try/blob/main/pictures/Screenshot%20from%202023-05-15%2016-25-49.png)  
+2. 项目到这里就基本完成了，接下来进行代码的优化，并将算法进行压缩，部署到小车和虚拟环境中。  
